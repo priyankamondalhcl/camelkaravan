@@ -1,0 +1,17 @@
+- route:
+    id: route-4964
+    nodePrefixId: route-d9c
+    from:
+      id: from-4502
+      uri: ssh
+      parameters:
+        host: SVALIAPELKP003
+        pollCommand: sh /home/nifiadmin/camel/cpu-usage.sh
+        repeatCount: "1"
+        password: nifi@123
+        username: nifiadmin
+      steps:
+        - log:
+            id: log-e4ca
+            message: ${body}
+            loggingLevel: INFO
